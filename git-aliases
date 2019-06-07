@@ -1,0 +1,10 @@
+git config --global alias.r "reset HEAD"
+git config --global alias.rb "rebase"
+git config --global alias.rba "rebase --abort"
+git config --global alias.rbc "rebase --continue"
+git config --global alias.rbi "rebase --interactive --autosquash"
+git config --global alias.rbm "rebase --interactive --autosquash origin/master"
+
+git config --global alias.hist "log --decorate --graph --oneline"
+
+git config --global branch.sort -committerdate # updates branch sort
