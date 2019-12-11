@@ -8,3 +8,4 @@ git config --global alias.rbm "rebase --interactive --autosquash origin/master"
 git config --global alias.hist "log --decorate --graph --oneline"
 
 git config --global branch.sort -committerdate # updates branch sort
+git config --global push.default current
