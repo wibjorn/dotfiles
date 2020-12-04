@@ -6,6 +6,7 @@ git config --global alias.rbi "rebase --interactive --autosquash"
 git config --global alias.rbm "rebase --interactive --autosquash origin/master"
 
 git config --global alias.hist "log --decorate --graph --oneline"
+alias.clear=!git reset --hard HEAD && git clean -f -d
 
 git config --global branch.sort -committerdate # updates branch sort
 git config --global push.default current
