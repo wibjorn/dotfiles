@@ -9,3 +9,5 @@ git config --global alias.hist "log --decorate --graph --oneline"
 
 git config --global branch.sort -committerdate # updates branch sort
 git config --global push.default current
+
+git config --global alias.clear "!git reset --hard HEAD && git clean -f -d"
