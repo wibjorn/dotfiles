@@ -1,15 +1,43 @@
 git config --global alias.co "checkout"
+
+git config --global alias.cob "checkout -b"
+
 git config --global alias.r "reset HEAD"
+
 git config --global alias.rb "rebase"
+
 git config --global alias.rba "rebase --abort"
+
 git config --global alias.rbc "rebase --continue"
+
 git config --global alias.rbi "rebase --interactive --autosquash"
+
 git config --global alias.rbm "rebase --interactive --autosquash origin/master"
 
 git config --global alias.hist "log --decorate --graph --oneline"
-alias.clear=!git reset --hard HEAD && git clean -f -d
 
 git config --global branch.sort -committerdate # updates branch sort
+
 git config --global push.default current
 
 git config --global alias.clear "!git reset --hard HEAD && git clean -f -d"
+
+git config --global alias.ec "config --global -e"
+
+git config --global alias.up "!git pull --rebase --prune $@ && git submodule update --init --recursive"
+
+git config --global alias.cm "!git add -A && git commit -m"
+
+git config --global alias.save "!git add -A && git commit -m 'SAVEPOINT'"
+
+git config --global alias.wip "!git add -u && git commit -m 'WIP'"
+
+git config --global alias.undo "reset HEAD~1 --soft"
+
+git config --global alias.amend "commit -a --amend"
+
+git config --global alias.wipe "!git add -A && git commit -qm 'WIPE SAVEPOINT' && git reset HEAD~1 --hard"
+
+git config --global alias.bclean "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
+
+git config --global alias.bdclean "!f() { git branch | grep -v "develop$" | grep -v "master$" | xargs -r git branch -D; }; f"
