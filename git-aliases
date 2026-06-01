@@ -41,3 +41,5 @@ git config --global alias.wipe "!git add -A && git commit -qm 'WIPE SAVEPOINT' &
 git config --global alias.bclean "!f() { git branch --merged ${1-master} | grep -v " ${1-master}$" | xargs -r git branch -d; }; f"
 
 git config --global alias.bdclean "!f() { git branch | grep -v "develop$" | grep -v "master$" | xargs -r git branch -D; }; f"
+
+git config --global alias.back 'checkout @{-1}'
